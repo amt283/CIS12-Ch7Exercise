@@ -6,8 +6,14 @@ at least one more doctest."""
 
 def uses_none(word, forbidden):
     """Checks whether a word avoid forbidden letters.
-    uses_none('banana', 'xyz') -> True
-    uses_none('apple', 'efg') -> False
+    >>> uses_none('banana', 'xyz')
+    True
+    >>> uses_none('apple', 'efg')
+    False
+    >>> uses_none('fishsticks', 'xyz')
+    True
+    >>> uses_none('rumplestiltskin', 'efg')
+    False
     """
 
     forbidden_list = list(forbidden) # convert string to list so each character is an element
@@ -20,7 +26,7 @@ def uses_none(word, forbidden):
             passed = False
     return passed
 
-print(uses_none('banana', 'xyz')) # True
-print(uses_none('apple', 'efg')) # False
-print(uses_none('fishsticks', 'xyz')) # True
-print(uses_none('rumplestiltskin', 'efg')) # False
+# print(uses_none('banana', 'xyz')) # True
+# print(uses_none('apple', 'efg')) # False
+# print(uses_none('fishsticks', 'xyz')) # True
+# print(uses_none('rumplestiltskin', 'efg')) # False
